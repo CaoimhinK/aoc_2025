@@ -3,8 +3,8 @@ import path from "path";
 import yargs from "yargs";
 
 export const runScriptWithArgs = (
-  first: (input: string) => void,
-  second: (input: string) => void,
+  first: (input: string, test: boolean) => void,
+  second: (input: string, test: boolean) => void,
   dirname: string,
   testInput: string,
 ) => {
@@ -18,10 +18,10 @@ export const runScriptWithArgs = (
     : Buffer.from(testInput);
 
   if (!args.part || args.part === "1") {
-    first(input.toString());
+    first(input.toString(), !args.solve);
   }
 
   if (!args.part || args.part === "2") {
-    second(input.toString());
+    second(input.toString(), !args.solve);
   }
 };
