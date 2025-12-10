@@ -9,6 +9,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "2025@workspace:."
   dependencies:
+    "@datastructures-js/priority-queue": "npm:^6.3.5"
     "@eslint/js": "npm:^9.39.1"
     "@types/lodash": "npm:^4"
     "@types/node": "npm:^24.10.1"
@@ -33,6 +34,22 @@ __metadata:
   dependencies:
     "@jridgewell/trace-mapping": "npm:0.3.9"
   checksum: 10c0/05c5368c13b662ee4c122c7bfbe5dc0b613416672a829f3e78bc49a357a197e0218d6e74e7c66cfcd04e15a179acab080bd3c69658c9fbefd0e1ccd950a07fc6
+  languageName: node
+  linkType: hard
+
+"@datastructures-js/heap@npm:^4.3.7":
+  version: 4.3.7
+  resolution: "@datastructures-js/heap@npm:4.3.7"
+  checksum: 10c0/0f81ffedf443ee1f1070a368e2b6068cfca681c183fa95a1800743d0f7413e8be2822e47f659c45634523748eb918b46af07e68c243d6103d69c3ce244a9b6d3
+  languageName: node
+  linkType: hard
+
+"@datastructures-js/priority-queue@npm:^6.3.5":
+  version: 6.3.5
+  resolution: "@datastructures-js/priority-queue@npm:6.3.5"
+  dependencies:
+    "@datastructures-js/heap": "npm:^4.3.7"
+  checksum: 10c0/fd97115c9f4c26af175942c5a3b8dc286704691bd9180678d9ed44400a1ec4dedb04f9bfffc102784c15876b01a6978be0c21508f01577690f16762e033eb69e
   languageName: node
   linkType: hard
 
