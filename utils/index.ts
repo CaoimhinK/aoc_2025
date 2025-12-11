@@ -6,7 +6,7 @@ export const runScriptWithArgs = (
   first: (input: string, test: boolean) => void,
   second: (input: string, test: boolean) => void,
   dirname: string,
-  testInput: string,
+  testInput: string | ((part: "1" | "2") => string),
 ) => {
   const args = yargs(process.argv.slice(2))
     .option("solve", { alias: "s", type: "boolean" })
@@ -15,13 +15,21 @@ export const runScriptWithArgs = (
 
   const input = args.solve
     ? readFileSync(path.resolve(dirname, "./input.txt"))
-    : Buffer.from(testInput);
+    : typeof testInput === "function"
+      ? (part: "1" | "2") => Buffer.from(testInput(part))
+      : Buffer.from(testInput);
 
   if (!args.part || args.part === "1") {
-    first(input.toString(), !args.solve);
+    first(
+      typeof input === "function" ? input("1").toString() : input.toString(),
+      !args.solve,
+    );
   }
 
   if (!args.part || args.part === "2") {
-    second(input.toString(), !args.solve);
+    second(
+      typeof input === "function" ? input("2").toString() : input.toString(),
+      !args.solve,
+    );
   }
 };
