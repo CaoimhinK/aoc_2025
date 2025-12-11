@@ -5,6 +5,7 @@
     "start": "ts-node $0/index.ts \"$@\""
   },
   "dependencies": {
+    "@datastructures-js/graph": "^5.3.1",
     "@datastructures-js/priority-queue": "^6.3.5",
     "lodash": "^4.17.21",
     "prettier": "^3.7.3",

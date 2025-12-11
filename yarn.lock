@@ -9,6 +9,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "2025@workspace:."
   dependencies:
+    "@datastructures-js/graph": "npm:^5.3.1"
     "@datastructures-js/priority-queue": "npm:^6.3.5"
     "@eslint/js": "npm:^9.39.1"
     "@types/lodash": "npm:^4"
@@ -37,6 +38,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@datastructures-js/graph@npm:^5.3.1":
+  version: 5.3.1
+  resolution: "@datastructures-js/graph@npm:5.3.1"
+  dependencies:
+    "@datastructures-js/queue": "npm:^3.1.3"
+  checksum: 10c0/fe52b73238032be81087c5b70e8d1bd603584c74f5822f6d70fad4aa8cf2ebf4596bf95a61c7dfc811fdfd90371223abc96483e2785b5b980b3dcef7ca6205b0
+  languageName: node
+  linkType: hard
+
 "@datastructures-js/heap@npm:^4.3.7":
   version: 4.3.7
   resolution: "@datastructures-js/heap@npm:4.3.7"
@@ -50,6 +60,13 @@ __metadata:
   dependencies:
     "@datastructures-js/heap": "npm:^4.3.7"
   checksum: 10c0/fd97115c9f4c26af175942c5a3b8dc286704691bd9180678d9ed44400a1ec4dedb04f9bfffc102784c15876b01a6978be0c21508f01577690f16762e033eb69e
+  languageName: node
+  linkType: hard
+
+"@datastructures-js/queue@npm:^3.1.3":
+  version: 3.1.4
+  resolution: "@datastructures-js/queue@npm:3.1.4"
+  checksum: 10c0/ea9de33df05b0d938160f2bb383e6be9fa1b9262e515a4db1adc04d7526a65d7d49d1253f31bc1a787ba0b490b17c4806b0f96bf5f0427edb7bdb0ce82d1c887
   languageName: node
   linkType: hard
 
